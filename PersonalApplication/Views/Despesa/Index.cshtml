@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(PersonalApplication.Models.Despesa despesa in ViewBag.Despesas)
+                {
+                    <tr>
+                        <td>@despesa.ID</td>
+                        <td>
+                            @Html.RouteLink(despesa.Nome, "VisualizaDespesa", new {id = despesa.ID})
+                        </td>
+                        <td>
+                            <a href="/Despesa/DecrementaQtd/@despesa.ID">Decrementa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Visualiza</title>
+</head>
+<body>
+    <div> 
+        Id: @ViewBag.Despesa.Id<br/>
+        Nome: @ViewBag.Despesa.Nome<br/>
+        Valor: @ViewBag.Despesa.Valor<br/>
+        Data: @ViewBag.Despesa.Data<br/>
+
+        @Html.RouteLink("Voltar a lista", "ListaDespesas")
+    </div>
+</body>
+</html>
