@@ -130,6 +130,7 @@
     <Compile Include="Controllers\DespesaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\RendaController.cs" />
     <Compile Include="DAO\DespesaDao.cs" />
     <Compile Include="DAO\ModelContext.cs" />
     <Compile Include="DAO\RendaDao.cs" />
@@ -201,6 +202,8 @@
     <Content Include="Views\Despesa\Visualiza.cshtml" />
     <Content Include="Views\Contador\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Renda\Form.cshtml" />
+    <Content Include="Views\Renda\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201909120402151_Initial.resx">

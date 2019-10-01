@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Form</title>
+</head>
+<body>
+    <div> 
+        <form action="/Renda/Adiciona" method="post">
+            <label for="name"> </label>
+            <input id="nome" name="renda.nome" /> <br />
+
+            <label for="Valor fixo"> </label>
+            <input id="ValorFixo" name=".renda.ValorFixo" /> <br />
+
+            <label for="Valor Variavel"> </label>
+            <input id="ValorVariavel" name="renda.ValorVariavel" /> <br />
+
+            <label for="ValorOutros"> </label>
+            <input id="ValorOutros" name="renda.ValorOutros" /> <br />
+
+            <input type="submit" value="Cadastrar" />
+        </form>
+    </div>
+</body>
+</html>

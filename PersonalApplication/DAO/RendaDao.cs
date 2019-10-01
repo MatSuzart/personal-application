@@ -1,4 +1,5 @@
 ﻿using PersonalApplication.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PersonalApplication.DAO
@@ -17,33 +18,14 @@ namespace PersonalApplication.DAO
             context.SaveChanges();
         }
 
-        /*public IList<Renda> BuscaPorNomeValorFixoValorVariavelValorOutros(string nome,double valorFixo,double valorVariavel,double valorOutros)
+        public IList<Renda> Lista()
         {
-            var busca = from v in contexto.Renda
-                        select v;
-
-            if (!String.IsNullOrEmpty(nome))
+            using (var contexto = new ModelContext())
             {
-                busca = busca.Where(v => v.Nome == nome);
+                return contexto.Rendas.ToList();
             }
+        }
 
-            if (ValorFixo != 0.0)
-            {
-                busca = busca.Where(v => v.ValorFixo == valorFixo);
-            }
-
-            if (ValorVariavel != 0.0)
-            {
-                busca = busca.Where(v => v.ValorVariavel == valorVariavel);
-            }
-
-            if (ValorOutros != 0.0)
-            {
-                busca = busca.Where(v => v.ValorOutros == valorOutros);
-            }
-
-            return busca.ToList();
-        }*/
         public Renda BuscaPorId(int id)
         {
             return context.Rendas.FirstOrDefault(r => r.ID == id);
